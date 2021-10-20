@@ -14,6 +14,20 @@
 						></the-sound-card>
 					</v-col>
 				</v-row>
+				<v-row justify="center" class="mt-5">
+					<v-col cols="12" sm="6" md="4" lg="3" xl="2">
+						<v-btn
+							color="red lighten-2"
+							class="pa-15 white--text rounded-lg text-md-h4 text-h5"
+							style="width: 100%;"
+							elevation="5"
+							x-large
+							@click="stopAllSounds"
+						>
+							STOP ALL
+						</v-btn>
+					</v-col>
+				</v-row>
 			</v-container>
 		</v-main>
 
@@ -28,6 +42,7 @@ import badumtssSound from '@/assets/audio/badumtss.mp3';
 import booSound from '@/assets/audio/boo.mp3';
 import drumrollSound from '@/assets/audio/drumroll.mp3';
 import sadTromboneSound from '@/assets/audio/trombone.mp3';
+import ussrSound from '@/assets/audio/ussr.mp3';
 
 export default {
 	components: {
@@ -55,8 +70,21 @@ export default {
 				title: 'SAD TROMBONE',
 				path: sadTromboneSound,
 			},
+			{
+				title: 'USSR ANTHEM',
+				path: ussrSound,
+			},
 		]
 	}),
+	methods: {
+		stopAllSounds() {
+			[...document.querySelectorAll('audio')].forEach(this.resetSound);
+		},
+		resetSound(soundElement) {
+			soundElement.pause();
+			soundElement.currentTime = 0;
+		},
+	},
 };
 </script>
 
