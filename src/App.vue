@@ -44,6 +44,7 @@ import drumrollSound from '@/assets/audio/drumroll.mp3';
 import sadTromboneSound from '@/assets/audio/trombone.mp3';
 import ussrSound from '@/assets/audio/ussr.mp3';
 import sadViolin from '@/assets/audio/sadviolin.mp3';
+import endCredits from '@/assets/audio/endcredits.mp3';
 
 export default {
 	components: {
@@ -78,6 +79,10 @@ export default {
 			{
 				title: 'SAD VIOLIN',
 				path: sadViolin,
+			},
+			{
+				title: 'END CREDITS',
+				path: endCredits,
 			},
 		]
 	}),
