@@ -5,6 +5,7 @@ import drumrollSound from '@/assets/audio/drumroll.mp3';
 import sadTromboneSound from '@/assets/audio/trombone.mp3';
 import ussrSound from '@/assets/audio/ussr.mp3';
 import sadViolin from '@/assets/audio/sadviolin.mp3';
+import endCredits from '@/assets/audio/endcredits.mp3';
 import Jeopardy from '@/assets/audio/jeopardy.mp3';
 
 export const soundList = [
@@ -15,5 +16,6 @@ export const soundList = [
 	{ title: 'SAD TROMBONE', path: sadTromboneSound },
 	{ title: 'USSR ANTHEM', path: ussrSound },
 	{ title: 'SAD VIOLIN', path: sadViolin },
+	{ title: 'END CREDITS', path: endCredits },
 	{ title: 'JEOPARDY', path: Jeopardy },
 ];
